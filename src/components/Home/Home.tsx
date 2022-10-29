@@ -4,11 +4,13 @@ import { HomeSkills } from './Sections/HomeSkills';
 import { HomeProjects } from './Sections/HomeProjects';
 import { HomeSectionExample } from './Sections/HomeSectionExample';
 import { HomeContact } from './Sections/HomeContact';
+import { HomeAbout } from './HomeAbout';
 
 function Home() {
   return (
     <>
       <HomeHeader title="Michael Balson"></HomeHeader>
+      <HomeAbout></HomeAbout>
       <HomeContent
         textColor="light"
         bgColor="dark"
