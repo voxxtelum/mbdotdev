@@ -1,9 +1,9 @@
 import HomeHeader from './HomeHeader';
 import { HomeContent } from './HomeContent';
-import { HomeSkills } from './HomeSkills';
-import { HomeProjects } from './HomeProjects';
-import { HomeSectionExample } from './HomeSectionExample';
-import { HomeContact } from './HomeContact';
+import { HomeSkills } from './Sections/HomeSkills';
+import { HomeProjects } from './Sections/HomeProjects';
+import { HomeSectionExample } from './Sections/HomeSectionExample';
+import { HomeContact } from './Sections/HomeContact';
 
 function Home() {
   return (
