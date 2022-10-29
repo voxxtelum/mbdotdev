@@ -9,14 +9,16 @@ export const HomeContent = () => {
       <div></div>
       <div className={styles['content']}>
         <div id="content__excerpt" className={`${styles['content__excerpt']}`}>
-          This is all{' '}
+          This is where all of my{' '}
           <span
             className={`${styles['color__blue']} ${styles['content__pin_word']}`}
           >
-            stuff
+            skills
           </span>{' '}
-          about me. Look what I can do.
-          <div className={styles['__full_height']}></div>
+          would go. Look what else I can do.
+          <div
+            className={`${styles['__full_height']} ${styles['bg__blue']}`}
+          ></div>
         </div>
       </div>
       <div></div>

@@ -84,10 +84,7 @@ function HomeHeader({ title }: HeaderProps) {
           </div>
         </h1>
       </div>
-      <div
-        className={`${styles['__full_height']} ${styles['bg__blue']}`}
-        ref={contentRef}
-      ></div>
+      <div className={`${styles['__full_height']}`} ref={contentRef}></div>
     </>
   );
 }

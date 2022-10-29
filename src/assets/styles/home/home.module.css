@@ -99,8 +99,12 @@ body {
 .content__wrapper {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   gap: 16px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 16fr 1fr;
+  }
 }
 
 .content {
