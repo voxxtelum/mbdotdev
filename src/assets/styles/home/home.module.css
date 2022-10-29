@@ -90,9 +90,23 @@ body {
   color: var(--clr-blue);
 }
 
+.color__dark {
+  color: var(--clr-dark);
+}
+
+.__1px {
+  height: 1px;
+}
+
 .content__pin_word {
   position: sticky;
   top: 4rem;
+}
+
+.pin__active {
+  background-color: var(--clr-dark);
+  box-shadow: -6px 6px 0px 0px rgba(255, 203, 71, 1);
+  transition: all 0.25s ease-in-out;
 }
 
 .content__wrapper {
@@ -118,5 +132,4 @@ body {
   font-size: var(--fs-3x);
   font-weight: var(--fw-700);
   line-height: var(--fs-3x);
-  mix-blend-mode: screen;
 }
