@@ -3,14 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect, useState } from 'react';
 
-import { HomeSkillsProps } from 'src/types/Home';
-
-type HomeContentProps = {
-  bgColor?: string;
-  accentColor?: string;
-  textColor?: string;
-  Content: React.ComponentType<HomeSkillsProps>;
-};
+import { HomeContentProps } from 'src/types/Home';
 
 export const HomeContent = ({
   bgColor,
@@ -27,20 +20,12 @@ export const HomeContent = ({
   let contentColor = accentColor ? `color__${accentColor}` : `color__blue`;
   let contentBG = accentColor ? `bg__${accentColor}` : `bg__blue`;
 
-  let color = textColor ? '' : `color_light`;
+  let color = textColor ? `color__${textColor}` : `color__light`;
 
   useEffect(() => {
     const skillsBox = skillsRef?.current;
     const observer = new IntersectionObserver(
       ([e]) => {
-        // e is our target element -- the skillsBox;
-        // other properties available include:
-        //   boundingClientRect
-        //   intersectionRatio
-        //   intersectionRect
-        //   rootBounds
-        //   target
-        //   time
         setIsSticky(e.isIntersecting);
       },
       { threshold: [0.1, 1], rootMargin: '0px 0px 0px 0px' }

@@ -1,7 +1,7 @@
 import styles from '@assets/styles/home/home.module.css';
 import { HomeSectionProps } from 'src/types/Home';
 
-export const HomeSkills = ({
+export const HomeProjects = ({
   contentColor,
   contentBG,
   textColor,
@@ -10,15 +10,15 @@ export const HomeSkills = ({
   return (
     <>
       <div className={`${styles['content__excerpt']} ${styles[textColor]}`}>
-        This is where all of my{' '}
+        I can put some{' '}
         <span
           className={`${isSticky ? '' : styles['pin__active']} ${
             styles['content__pin_word']
           } ${styles[contentColor]}`}
         >
-          skills
+          projects
         </span>{' '}
-        would go. Look what else I can dommmmmmmm.
+        here. Look at how many there are.
         <div
           className={`${styles['__full_height']} ${styles[contentBG]}`}
         ></div>

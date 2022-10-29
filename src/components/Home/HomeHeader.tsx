@@ -61,6 +61,20 @@ function HomeHeader({ title }: HeaderProps) {
             y: 34,
           },
           0
+        )
+        .to(
+          ['#title-1', '#title-2'],
+          {
+            opacity: 0,
+          },
+          0
+        )
+        .to(
+          '#title-3',
+          {
+            color: () => '#0f141a',
+          },
+          0
         );
 
       return () => ctx.revert(); // cleanup!
