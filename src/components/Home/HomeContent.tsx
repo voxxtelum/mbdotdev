@@ -3,10 +3,35 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect, useState } from 'react';
 
-export const HomeContent = () => {
+type HomeContentProps = {
+  bgColor?: string;
+  accentColor?: string;
+  textColor?: string;
+  Content: React.ComponentType<HomeSkillsProps>;
+};
+type HomeSkillsProps = {
+  contentColor: string;
+  contentBG: string;
+  textColor: string;
+  isSticky: boolean;
+};
+
+export const HomeContent = ({
+  bgColor,
+  accentColor,
+  textColor,
+  Content,
+}: HomeContentProps) => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   // this is the element we'll be targeting!
   const skillsRef = useRef<HTMLDivElement>(null);
+
+  let backgroundColor = bgColor ? `bg__${bgColor}` : `bg__dark`;
+
+  let contentColor = accentColor ? `color__${accentColor}` : `color__blue`;
+  let contentBG = accentColor ? `bg__${accentColor}` : `bg__blue`;
+
+  let color = textColor ? '' : `color_light`;
 
   useEffect(() => {
     const skillsBox = skillsRef?.current;
@@ -36,24 +61,18 @@ export const HomeContent = () => {
   }, [skillsRef]);
 
   return (
-    <section className={`${styles['content__wrapper']} ${styles['bg__dark']}`}>
+    <section
+      className={`${styles['content__wrapper']} ${styles[backgroundColor]}`}
+    >
       <div></div>
       <div className={styles['content']}>
         <div ref={skillsRef} className={styles.__1px}></div>
-        <div id="content__excerpt" className={`${styles['content__excerpt']}`}>
-          This is where all of my{' '}
-          <span
-            className={`${isSticky ? '' : styles['pin__active']} ${
-              styles['content__pin_word']
-            } ${styles['color__blue']}`}
-          >
-            skills
-          </span>{' '}
-          would go. Look what else I can do.
-          <div
-            className={`${styles['__full_height']} ${styles['bg__blue']}`}
-          ></div>
-        </div>
+        <Content
+          textColor={color}
+          contentColor={contentColor}
+          contentBG={contentBG}
+          isSticky={isSticky}
+        />
       </div>
       <div></div>
     </section>

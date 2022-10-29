@@ -1,9 +1,7 @@
 import styles from '@assets/styles/home/home.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useRef, useEffect, useLayoutEffect } from 'react';
-
-import { HomeContent } from './HomeContent';
+import { useRef, useLayoutEffect } from 'react';
 
 type HeaderProps = { title: string };
 
