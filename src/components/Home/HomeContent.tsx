@@ -3,17 +3,13 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect, useState } from 'react';
 
+import { HomeSkillsProps } from 'src/types/Home';
+
 type HomeContentProps = {
   bgColor?: string;
   accentColor?: string;
   textColor?: string;
   Content: React.ComponentType<HomeSkillsProps>;
-};
-type HomeSkillsProps = {
-  contentColor: string;
-  contentBG: string;
-  textColor: string;
-  isSticky: boolean;
 };
 
 export const HomeContent = ({

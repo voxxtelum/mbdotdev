@@ -1,11 +1,5 @@
 import styles from '@assets/styles/home/home.module.css';
-
-type HomeSkillsProps = {
-  contentColor: string;
-  contentBG: string;
-  textColor: string;
-  isSticky: boolean;
-};
+import { HomeSkillsProps } from 'src/types/Home';
 
 export const HomeSkills = ({
   contentColor,
