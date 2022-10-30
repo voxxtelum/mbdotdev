@@ -32,8 +32,8 @@ export const HomeContact = ({
         <div className={`${styles['contact__wrapper']}`}>
           <h2 className={`${styles['contact__title']}`}>Get in touch</h2>
           <ContactLink {...email} />
-          <ContactLink {...github} />
           <ContactLink {...linkedin} />
+          <ContactLink {...github} />
         </div>
         {/* <div
           className={`${utility['__full_height']} ${utility[contentBG]}`}
