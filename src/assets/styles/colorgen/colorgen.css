@@ -29,10 +29,10 @@
   --yellow-4: hsl(46, 97%, 57%);
   --yellow-5: hsl(46, 97%, 52%);
 }
-body {
+/* body {
   background-color: var(--dark-1);
   font-family: var(--ff-mono);
-}
+} */
 .color-generator {
   color: var(--light-1);
   min-height: 100vh;
