@@ -1,4 +1,5 @@
 import styles from '@assets/styles/home/home.module.css';
+import utility from '@assets/styles/base/_utility.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useLayoutEffect } from 'react';
@@ -97,7 +98,7 @@ function HomeHeader({ title }: HeaderProps) {
           </div>
         </h1>
       </div>
-      <div className={`${styles['__full_height']}`} ref={contentRef}></div>
+      <div className={`${utility['__full_height']}`} ref={contentRef}></div>
     </>
   );
 }

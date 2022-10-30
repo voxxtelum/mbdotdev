@@ -1,17 +1,18 @@
 import styles from '@assets/styles/home/home.module.css';
+import utility from '@assets/styles/base/_utility.module.css';
 
 export const HomeAbout = () => {
   return (
     <>
       <div
-        className={`${styles['about__container']} ${styles['color__dark']} ${styles['bg__yellow']}`}
+        className={`${styles['about__container']} ${utility['color__dark']} ${utility['bg__yellow']}`}
       >
         <div></div>
         <div className={`${styles['about__text']}`}>
           <p>
             Everyone and everything has a{' '}
             <span
-              className={`${styles['about__emphasis']} ${styles['color__yellow']}`}
+              className={`${styles['about__emphasis']} ${utility['color__yellow']}`}
             >
               story
             </span>
@@ -27,7 +28,7 @@ export const HomeAbout = () => {
           <p>
             As a{' '}
             <span
-              className={`${styles['about__emphasis']} ${styles['color__blue']}`}
+              className={`${styles['about__emphasis']} ${utility['color__blue']}`}
             >
               data analyst
             </span>
@@ -37,7 +38,7 @@ export const HomeAbout = () => {
           <p>
             As a freelance{' '}
             <span
-              className={`${styles['about__emphasis']} ${styles['color__opal']}`}
+              className={`${styles['about__emphasis']} ${utility['color__opal']}`}
             >
               developer
             </span>
@@ -47,7 +48,7 @@ export const HomeAbout = () => {
           <p>
             Now, I'm looking for the{' '}
             <span
-              className={`${styles['about__emphasis']} ${styles['color__purple']}`}
+              className={`${styles['about__emphasis']} ${utility['color__purple']}`}
             >
               next chapter
             </span>{' '}

@@ -1,4 +1,5 @@
 import styles from '@assets/styles/home/home.module.css';
+import utility from '@assets/styles/base/_utility.module.css';
 import { HomeSectionProps } from 'src/types/Home';
 
 export const HomeContact = ({
@@ -9,16 +10,16 @@ export const HomeContact = ({
 }: HomeSectionProps) => {
   return (
     <>
-      <div className={`${styles['content__excerpt']} ${styles[textColor]}`}>
+      <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>
         <span
           className={`${isSticky ? '' : styles['pin__active']} ${
             styles['content__pin_word']
-          } ${styles[contentColor]}`}
+          } ${utility[contentColor]}`}
         >
           Get in touch
         </span>
         <div
-          className={`${styles['__full_height']} ${styles[contentBG]}`}
+          className={`${utility['__full_height']} ${utility[contentBG]}`}
         ></div>
       </div>
     </>

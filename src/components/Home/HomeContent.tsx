@@ -1,4 +1,5 @@
 import styles from '@assets/styles/home/home.module.css';
+import utility from '@assets/styles/base/_utility.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect, useState } from 'react';
@@ -43,11 +44,11 @@ export const HomeContent = ({
 
   return (
     <section
-      className={`${styles['content__wrapper']} ${styles[backgroundColor]}`}
+      className={`${styles['content__wrapper']} ${utility[backgroundColor]}`}
     >
       <div></div>
       <div className={styles['content']}>
-        <div ref={skillsRef} className={styles.__1px}></div>
+        <div ref={skillsRef} className={utility.__1px}></div>
         <Content
           textColor={color}
           contentColor={contentColor}
