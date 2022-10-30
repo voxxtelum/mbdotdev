@@ -32,6 +32,7 @@ function HomeHeader({ title }: HeaderProps) {
           scrub: 1,
           pinSpacing: false,
           invalidateOnRefresh: true,
+          markers: true,
         },
       });
 
