@@ -15,13 +15,9 @@ function HomeHeader({ title }: HeaderProps) {
     const titleDiv = document.getElementById('title-1') as HTMLElement;
     const titleSpace = titleDiv?.offsetHeight || 100;
 
-    console.log(titleSpace);
-
     const varSpace = getComputedStyle(titleDiv).getPropertyValue('font-size');
 
     const varSpaceAdj = Number(varSpace.slice(0, -2)) + 34;
-
-    console.log(varSpaceAdj);
 
     let ctx = gsap.context(() => {
       let timeline = gsap.timeline({

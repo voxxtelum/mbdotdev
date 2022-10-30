@@ -29,18 +29,15 @@ export const HomeContact = ({
   return (
     <>
       <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>
-        <span className={`${utility['bg__dark']} ${utility[contentColor]}`}>
-          Get in touch
-        </span>
-
         <div className={`${styles['contact__wrapper']}`}>
+          <h2 className={`${styles['contact__title']}`}>Get in touch</h2>
           <ContactLink {...email} />
           <ContactLink {...github} />
           <ContactLink {...linkedin} />
         </div>
-        <div
+        {/* <div
           className={`${utility['__full_height']} ${utility[contentBG]}`}
-        ></div>
+        ></div> */}
       </div>
     </>
   );

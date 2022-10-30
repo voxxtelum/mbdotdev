@@ -18,6 +18,8 @@
   --fs-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
   --fs-2x: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
   --fs-3x: clamp(3.05rem, 3.54vw + 2.17rem, 8rem);
+
+  --letterpressed: 2px 2px 3px rgba(255, 255, 255, 0.2);
 }
 
 h1 {
