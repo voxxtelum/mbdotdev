@@ -31,8 +31,8 @@ function Home() {
       ></HomeContent>
       <HomeContent
         textColor="dark"
-        bgColor="blue"
-        accentColor="blue"
+        bgColor="opal"
+        accentColor="yellow"
         Content={HomeContact}
       ></HomeContent>
     </>

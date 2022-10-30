@@ -365,6 +365,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@reacticons/ionicons@^6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@reacticons/ionicons/-/ionicons-6.0.4.tgz#3871c813d41c6faf473b9465e844d316fcf75b54"
+  integrity sha512-FN4/D6a/kS2dEMwVltAGCKiYArDESGW1fgsV2bgz2ZHFAlmBF7o2p7Ckr+clOHzIEg1odWm+gdc+DBtYc80ENQ==
+
 "@remix-run/router@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.2.tgz#1c17eadb2fa77f80a796ad5ea9bf108e6993ef06"
