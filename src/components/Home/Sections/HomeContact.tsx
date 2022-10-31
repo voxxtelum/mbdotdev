@@ -1,9 +1,7 @@
 import styles from '@assets/styles/home/home.module.css';
 import utility from '@assets/styles/base/_utility.module.css';
-import { HomeSectionProps, LinksArray, ContactLinkProps } from 'src/types/Home';
-import { ContactLink } from './ContactLink';
+import { HomeSectionProps, ContactLinkProps } from 'src/types/Home';
 import { ContactLinks } from './ContactLinks';
-import IonIcon from '@reacticons/ionicons';
 
 let linksArray = [] as ContactLinkProps[];
 linksArray[0] = {
