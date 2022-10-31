@@ -2,6 +2,7 @@ import styles from '@assets/styles/home/home.module.css';
 import utility from '@assets/styles/base/_utility.module.css';
 import { HomeSectionProps, ContactLinkProps } from 'src/types/Home';
 import { ContactLinks } from './ContactLinks';
+import { ContactEmailForm } from './ContactEmailForm';
 
 let linksArray = [] as ContactLinkProps[];
 linksArray[0] = {
@@ -27,6 +28,7 @@ export const HomeContact = ({ textColor }: Partial<HomeSectionProps>) => {
         <div className={`${styles['contact__wrapper']}`}>
           <h2 className={`${styles['contact__title']}`}>Get in touch</h2>
           <ContactLinks linksArray={linksArray} />
+          <ContactEmailForm />
         </div>
         {/* <div
           className={`${utility['__full_height']} ${utility[contentBG]}`}
