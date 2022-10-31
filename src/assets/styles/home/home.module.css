@@ -106,6 +106,7 @@ body {
 
 .pin__active {
   background-color: var(--clr-dark);
+  mix-blend-mode: hard-light;
   box-shadow: -6px 6px 0px 0px rgba(255, 203, 71, 1),
     -5px 5px 0px 0px rgba(255, 203, 71, 1),
     -4px 4px 0px 0px rgba(255, 203, 71, 1),
@@ -132,9 +133,9 @@ body {
 
 .content__excerpt {
   font-family: var(--ff-body);
-  font-size: var(--fs-3x);
+  font-size: var(--fs-2x);
   font-weight: var(--fw-700);
-  line-height: var(--fs-3x);
+  line-height: var(--fs-2x);
   text-transform: uppercase;
   overflow-wrap: normal;
 
@@ -283,4 +284,9 @@ h2.contact__title {
   & .contact__bg:before {
     clip-path: circle(200% at calc(1.5 * var(--fs-lg)) 50%);
   }
+}
+
+.projects__wrapper {
+}
+.project__card__wrapper {
 }

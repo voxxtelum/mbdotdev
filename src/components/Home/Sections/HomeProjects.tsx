@@ -1,6 +1,7 @@
 import { StylesContext } from '@context/Styles';
 import React from 'react';
 import { HomeSectionProps } from 'src/types/Home';
+import { ProjectCard } from './ProjectCard';
 
 export const HomeProjects = ({
   contentColor,
@@ -22,8 +23,11 @@ export const HomeProjects = ({
         </span>{' '}
         here. Look at how many there are.
         <div
-          className={`${utility['__full_height']} ${utility[contentBG]}`}
-        ></div>
+          className={`${styles['projects__wrapper']} ${utility['__full_height']} ${utility[contentBG]}`}
+        >
+          <ProjectCard />
+          <ProjectCard />
+        </div>
       </div>
     </>
   );
