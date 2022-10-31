@@ -35,31 +35,36 @@ export const ProjectCard = () => {
                   src={image}
                 ></img>
               </div>
-              <div className={styles['project__card__info']}>
-                <h3 className={styles['project_card__title']}>{title}</h3>
-                <p className={styles['project_card__description']}>
-                  {description}
-                </p>
-                <div className={styles['project_card_tags']}>
-                  {tags.map((tag, tagIndex) => (
-                    <span
-                      key={`${tagIndex}-${tag}`}
-                      className={styles['project__tag']}
-                    >
-                      {tag}
+              <div className={styles['project__info']}>
+                <h3 className={styles['project__title']}>{title}</h3>
+                <div className={styles['project__tag__cloud']}>
+                  <div>
+                    <span className={styles['project__category']}>
+                      {category}
                     </span>
-                  ))}
+                  </div>
+                  <div className={styles['project__tags']}>
+                    {tags.map((tag, tagIndex) => (
+                      <span
+                        key={`${tagIndex}-${tag}`}
+                        className={styles['project__tag']}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className={styles['project__card__links']}>
+                <p className={styles['project__description']}>{description}</p>
+                <div className={styles['project__links']}>
                   {links.map(({ logo, title: linkTitle, url }, linkIndex) => (
-                    <div className={styles['project__link']}>
+                    <div className={styles['project__link__wrapper']}>
                       <div className={styles['project__link__logo']}>
                         <IonIcon
                           key={`${logo}-${linkIndex}`}
                           name={logo}
                         ></IonIcon>
                       </div>
-                      <div className={`${styles['project__link__wrapper']}`}>
+                      <div className={`${styles['project__link']}`}>
                         <a href={url} target="_blank" rel="noopener noreferrer">
                           {linkTitle}
                           <span
