@@ -1,12 +1,13 @@
-import styles from '@assets/styles/home/home.module.css';
-import utility from '@assets/styles/base/_utility.module.css';
+import { StylesContext } from '@context/Styles';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
 import { useRef, useLayoutEffect } from 'react';
 
 type HeaderProps = { title: string };
 
 function HomeHeader({ title }: HeaderProps) {
+  const { styles, utility } = React.useContext(StylesContext);
   gsap.registerPlugin(ScrollTrigger);
 
   const contentRef = useRef<HTMLDivElement>(null);

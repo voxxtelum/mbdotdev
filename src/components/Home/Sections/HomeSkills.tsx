@@ -1,6 +1,5 @@
-import styles from '@assets/styles/home/home.module.css';
-
-import utility from '@assets/styles/base/_utility.module.css';
+import { StylesContext } from '@context/Styles';
+import React from 'react';
 import { HomeSectionProps } from 'src/types/Home';
 
 export const HomeSkills = ({
@@ -9,6 +8,7 @@ export const HomeSkills = ({
   textColor,
   isSticky,
 }: HomeSectionProps) => {
+  const { styles, utility } = React.useContext(StylesContext);
   return (
     <>
       <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>

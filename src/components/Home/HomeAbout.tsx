@@ -1,7 +1,8 @@
-import styles from '@assets/styles/home/home.module.css';
-import utility from '@assets/styles/base/_utility.module.css';
+import { StylesContext } from '@context/Styles';
+import React from 'react';
 
 export const HomeAbout = () => {
+  const { styles, utility } = React.useContext(StylesContext);
   return (
     <>
       <div

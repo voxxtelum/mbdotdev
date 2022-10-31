@@ -1,8 +1,8 @@
-import styles from '@assets/styles/home/home.module.css';
-import utility from '@assets/styles/base/_utility.module.css';
 import { HomeSectionProps, ContactLinkProps } from 'src/types/Home';
 import { ContactLinks } from './ContactLinks';
 import { ContactEmailForm } from './ContactEmailForm';
+import React from 'react';
+import { StylesContext } from '@context/Styles';
 
 let linksArray = [] as ContactLinkProps[];
 linksArray[0] = {
@@ -22,6 +22,7 @@ linksArray[2] = {
 };
 
 export const HomeContact = ({ textColor }: Partial<HomeSectionProps>) => {
+  const { styles, utility } = React.useContext(StylesContext);
   return (
     <>
       <div className={`${styles['content__excerpt']} ${utility[textColor!]}`}>

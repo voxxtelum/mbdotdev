@@ -1,7 +1,7 @@
-import styles from '@assets/styles/home/home.module.css';
-import utility from '@assets/styles/base/_utility.module.css';
+import { StylesContext } from '@context/Styles';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
 import { useRef, useEffect, useState } from 'react';
 
 import { HomeContentProps } from 'src/types/Home';
@@ -12,6 +12,7 @@ export const HomeContent = ({
   textColor,
   Content,
 }: HomeContentProps) => {
+  const { styles, utility } = React.useContext(StylesContext);
   const [isSticky, setIsSticky] = useState<boolean>(false);
   // this is the element we'll be targeting!
   const skillsRef = useRef<HTMLDivElement>(null);

@@ -1,10 +1,11 @@
-import styles from '@assets/styles/home/home.module.css';
-import utility from '@assets/styles/base/_utility.module.css';
+import { StylesContext } from '@context/Styles';
 import IonIcon from '@reacticons/ionicons';
+import React from 'react';
 
 import { ContactLinkProps } from 'src/types/Home';
 
 export const ContactLink = ({ logo, url, title }: ContactLinkProps) => {
+  const { styles, utility } = React.useContext(StylesContext);
   return (
     <>
       <div className={`${styles['contact__link']}`}>

@@ -1,9 +1,10 @@
-import styles from '@assets/styles/home/home.module.css';
-import utility from '@assets/styles/base/_utility.module.css';
+import { StylesContext } from '@context/Styles';
+import React from 'react';
 import { LinksArray } from 'src/types/Home';
 import { ContactLink } from './ContactLink';
 
 export const ContactLinks = ({ linksArray }: LinksArray) => {
+  const { styles, utility } = React.useContext(StylesContext);
   return (
     <>
       {linksArray.map((link) => (
