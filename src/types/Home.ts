@@ -1,3 +1,5 @@
+import IonIcon from '@reacticons/ionicons';
+
 export type HomeSectionProps = {
   contentColor: string;
   contentBG: string;
@@ -10,4 +12,13 @@ export type HomeContentProps = {
   accentColor?: string;
   textColor?: string;
   Content: React.ComponentType<HomeSectionProps>;
+};
+
+export type ContactLinkProps = {
+  logo: React.ComponentProps<typeof IonIcon>['name'];
+  url: string;
+  title: string;
+};
+export type LinksArray = {
+  linksArray: ContactLinkProps[];
 };

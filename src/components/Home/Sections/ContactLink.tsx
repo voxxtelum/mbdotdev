@@ -2,11 +2,7 @@ import styles from '@assets/styles/home/home.module.css';
 import utility from '@assets/styles/base/_utility.module.css';
 import IonIcon from '@reacticons/ionicons';
 
-type ContactLinkProps = {
-  logo: React.ComponentProps<typeof IonIcon>['name'];
-  url: string;
-  title: string;
-};
+import { ContactLinkProps } from 'src/types/Home';
 
 export const ContactLink = ({ logo, url, title }: ContactLinkProps) => {
   return (
