@@ -1,6 +1,6 @@
 import { StylesContext } from '@context/Styles';
 import React from 'react';
-import { HomeSectionProps } from 'src/types/Home';
+import { HomeSectionProps } from 'src/types/global';
 import { ProjectCard } from './ProjectCard';
 
 export const HomeProjects = ({
@@ -25,7 +25,6 @@ export const HomeProjects = ({
         <div
           className={`${styles['projects__wrapper']} ${utility['__full_height']} ${utility[contentBG]}`}
         >
-          <ProjectCard />
           <ProjectCard />
         </div>
       </div>

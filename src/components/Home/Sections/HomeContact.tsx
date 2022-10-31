@@ -1,4 +1,4 @@
-import { HomeSectionProps, ContactLinkProps } from 'src/types/Home';
+import { HomeSectionProps, ContactLinkProps } from 'src/types/global';
 import { ContactLinks } from './ContactLinks';
 import { ContactEmailForm } from './ContactEmailForm';
 import React from 'react';

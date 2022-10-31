@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React from 'react';
 import { useRef, useEffect, useState } from 'react';
 
-import { HomeContentProps } from 'src/types/Home';
+import { HomeContentProps } from 'src/types/global';
 
 export const HomeContent = ({
   bgColor,

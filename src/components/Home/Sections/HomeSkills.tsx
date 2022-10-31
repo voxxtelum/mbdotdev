@@ -1,6 +1,6 @@
 import { StylesContext } from '@context/Styles';
 import React from 'react';
-import { HomeSectionProps } from 'src/types/Home';
+import { HomeSectionProps } from 'src/types/global';
 
 export const HomeSkills = ({
   contentColor,

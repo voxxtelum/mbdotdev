@@ -2,7 +2,7 @@ import { StylesContext } from '@context/Styles';
 import IonIcon from '@reacticons/ionicons';
 import React from 'react';
 
-import { ContactLinkProps } from 'src/types/Home';
+import { ContactLinkProps } from 'src/types/global';
 
 export const ContactLink = ({ logo, url, title }: ContactLinkProps) => {
   const { styles, utility } = React.useContext(StylesContext);

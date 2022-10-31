@@ -287,6 +287,26 @@ h2.contact__title {
 }
 
 .projects__wrapper {
+  margin-block-start: 6rem;
+
+  text-transform: none;
+  font-size: var(--fs-md);
+  line-height: var(--fs-md);
 }
 .project__card__wrapper {
+  display: flex;
+  gap: var(--fs-md);
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+
+  & .project__image__wrapper {
+    & img {
+      min-width: clamp(12.5rem, -5.357rem + 47.619vw, 37.5rem);
+    }
+  }
+}
+
+.project__card__info {
 }

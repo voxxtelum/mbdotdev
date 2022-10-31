@@ -1,24 +1,34 @@
 import IonIcon from '@reacticons/ionicons';
 
-export type HomeSectionProps = {
+export interface HomeSectionProps {
   contentColor: string;
   contentBG: string;
   textColor: string;
   isSticky: boolean;
-};
+}
 
-export type HomeContentProps = {
+export interface HomeContentProps {
   bgColor?: string;
   accentColor?: string;
   textColor?: string;
   Content: React.ComponentType<HomeSectionProps>;
-};
+}
 
-export type ContactLinkProps = {
+export interface ContactLinkProps {
   logo: React.ComponentProps<typeof IonIcon>['name'];
   url: string;
   title: string;
-};
-export type LinksArray = {
+}
+
+export interface LinksArray {
   linksArray: ContactLinkProps[];
-};
+}
+
+export interface Project {
+  title: string;
+  category: string;
+  image: string;
+  description: string;
+  tags: string[];
+  links: ContactLinkProps[];
+}
