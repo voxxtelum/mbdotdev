@@ -287,7 +287,7 @@ h2.contact__title {
 }
 
 .projects__wrapper {
-  margin-block-start: 6rem;
+  margin-block: calc(2 * var(--fs-3x));
 
   text-transform: none;
   font-size: var(--fs-md);
@@ -304,11 +304,17 @@ h2.contact__title {
   & .project__image__wrapper {
     & img {
       min-width: clamp(12.5rem, 3.571rem + 23.81vw, 25rem);
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
   }
 }
 
 .project__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
   & h3.project__title {
     font-size: var(--fs-xl);
     font-family: var(--ff-title);
@@ -318,13 +324,19 @@ h2.contact__title {
     padding-inline: var(--fs-sm);
     padding-block: calc(0.5 * var(--fs-xs));
     margin-inline: calc(-1 * var(--fs-sm));
-    margin-block-end: var(--fs-base);
+    /* margin-block-end: var(--fs-base); */
   }
 }
 
 .project__tag__cloud {
   display: flex;
   gap: var(--fs-sm);
+  background-color: rgb(15 20 26 / 0.05);
+  padding-inline: var(--fs-sm);
+  padding-block: calc(0.5 * var(--fs-xs));
+  margin-inline: calc(-1 * var(--fs-sm));
+  margin-block-end: var(--fs-base);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 
   & span.project__category {
     font-family: var(--ff-title);
@@ -355,7 +367,7 @@ h2.contact__title {
 }
 
 p.project__description {
-  margin-block: var(--fs-base);
+  margin-block-end: var(--fs-base);
   font-size: var(--fs-base);
   line-height: calc(1.4 * var(--fs-base));
   font-family: var(--ff-title);
@@ -365,7 +377,6 @@ p.project__description {
 .project__links {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--fs-base);
   margin-inline-start: -6px;
 
   color: var(--clr-dark);
