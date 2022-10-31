@@ -12,6 +12,23 @@ body {
   font-family: var(--ff-body);
 }
 
+.title__bar__wrapper {
+  position: fixed;
+  background-color: var(--clr-yellow);
+  min-height: var(--fs-3x);
+  width: 100%;
+  padding: var(--fs-sm);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 8px 2px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+
+  & h1 {
+    visibility: hidden;
+    color: var(--clr-dark);
+    font-family: var(--ff-display);
+    font-size: var(--fs-lg);
+  }
+}
+
 .header-container {
   position: relative;
   min-height: 100vh;
@@ -20,7 +37,12 @@ body {
 .header-title {
   font-family: var(--ff-display);
   font-size: var(--fs-3x);
-  line-height: calc(1.2 * var(--fs-3x));
+  line-height: calc(1.1 * var(--fs-3x));
+
+  @media (max-width: 700px) {
+    font-size: var(--fs-2x);
+    line-height: calc(1.1 * var(--fs-2x));
+  }
 
   & > div {
     position: fixed;
@@ -28,27 +50,23 @@ body {
     margin-left: 1rem;
   }
 
-  & :nth-child(3) {
-    color: var(--clr-blue);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    overflow: hidden;
+  & :nth-child(1) {
+    color: var(--clr-purple);
+    /* margin-inline-start: calc(1.5 * var(--fs-xs)); */
   }
   & :nth-child(2) {
     color: var(--clr-yellow);
     /* margin-inline-start: var(--fs-xs); */
   }
-  & :nth-child(1) {
-    color: var(--clr-purple);
-    /* margin-inline-start: calc(1.5 * var(--fs-xs)); */
-  }
-  & :nth-child(4) {
-    color: var(--clr-dark);
-    opacity: 1;
-    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  & :nth-child(3) {
+    color: var(--clr-blue);
     overflow: hidden;
-    transform: translate(10px, 34px);
-    /* mix-blend-mode: color-burn; */
+    z-index: 1;
   }
+}
+
+.header__bottom__spacer {
+  min-height: var(--fs-3x);
 }
 
 .header__title_container {
@@ -79,7 +97,7 @@ body {
 .content__pin_word {
   background-color: var(--clr-dark);
   position: sticky;
-  top: 4rem;
+  top: calc(var(--fs-3x) - 6px);
   padding: 0 var(--fs-xs);
   margin: 0 calc(-1 * var(--fs-xs));
 
@@ -88,7 +106,12 @@ body {
 
 .pin__active {
   background-color: var(--clr-dark);
-  box-shadow: -6px 6px 0px 0px rgba(255, 203, 71, 1);
+  box-shadow: -6px 6px 0px 0px rgba(255, 203, 71, 1),
+    -5px 5px 0px 0px rgba(255, 203, 71, 1),
+    -4px 4px 0px 0px rgba(255, 203, 71, 1),
+    -3px 3px 0px 0px rgba(255, 203, 71, 1),
+    -2px 2px 0px 0px rgba(255, 203, 71, 1),
+    -1px 1px 0px 0px rgba(255, 203, 71, 1);
   transition: all 0.25s ease-in-out;
   z-index: 1;
 }
@@ -128,7 +151,7 @@ body {
   background: var(--clr-dark)
     linear-gradient(180deg, var(--clr-yellow) 0%, #d6c63fea 100%);
 
-  box-shadow: rgba(0, 0, 0, 0.45) 20px 25px 20px 20px;
+  /* box-shadow: rgba(0, 0, 0, 0.45) 20px 25px 20px 20px; */
 
   padding: var(--fs-3x) 0;
 
@@ -162,6 +185,7 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
 
   padding-block: calc(3 * var(--fs-3x));
 

@@ -54,3 +54,13 @@
 .color__orange {
   color: var(--clr-orange);
 }
+
+.fs__sm {
+  font-size: var(--fs-sm);
+}
+.fs__base {
+  font-size: var(--fs-base);
+}
+.fs__md {
+  font-size: var(--fs-md);
+}

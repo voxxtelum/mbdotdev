@@ -19,6 +19,10 @@ function HomeHeader({ title }: HeaderProps) {
 
     const varSpaceAdj = Number(varSpace.slice(0, -2)) + 34;
 
+    const docStyle = getComputedStyle(document.documentElement);
+    const fsSmall = docStyle.getPropertyValue('--fs-sm');
+    const fslarge = docStyle.getPropertyValue('--fs-lg');
+
     let ctx = gsap.context(() => {
       let timeline = gsap.timeline({
         scrollTrigger: {
@@ -26,7 +30,7 @@ function HomeHeader({ title }: HeaderProps) {
           pin: true,
           start: 'top bottom',
           end: 'top top',
-          scrub: 1,
+          scrub: 0.5,
           pinSpacing: false,
           invalidateOnRefresh: true,
         },
@@ -35,27 +39,27 @@ function HomeHeader({ title }: HeaderProps) {
       timeline
         .fromTo(
           '#title-1',
-          { y: () => titleSpace },
+          { y: () => titleSpace * 2 },
           {
-            y: 24,
+            y: () => titleSpace,
           },
           0
         )
         .fromTo(
           '#title-2',
-          { y: () => titleSpace * 2 },
+          { y: () => titleSpace * 3 },
           {
             x: 5,
-            y: 29,
+            y: () => titleSpace,
           },
           0
         )
         .fromTo(
           '#title-3',
-          { y: () => titleSpace * 3 },
+          { y: () => titleSpace * 4 },
           {
             x: 10,
-            y: 34,
+            y: () => titleSpace,
           },
           0
         )
@@ -71,7 +75,23 @@ function HomeHeader({ title }: HeaderProps) {
           {
             color: () => '#0f141a',
           },
-          0
+          1
+        )
+        .to(
+          '#title-3',
+          {
+            x: fsSmall,
+            y: fsSmall,
+            fontSize: fslarge,
+          },
+          1
+        )
+        .to(
+          '#title__bar',
+          {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%)',
+          },
+          1
         );
 
       return () => ctx.revert(); // cleanup!
@@ -83,8 +103,13 @@ function HomeHeader({ title }: HeaderProps) {
   return (
     <>
       <div id="header_container" className={styles['header-container']}>
+        <div id="title__bar" className={styles['title__bar__wrapper']}>
+          <h1>{headerTitle}</h1>
+        </div>
         <h1 className={styles['header-title']}>
-          <div id="title-1">{headerTitle}</div>
+          <div id="title-1" aria-hidden="true">
+            {headerTitle}
+          </div>
           <div id="title-2" aria-hidden="true">
             {headerTitle}
           </div>
@@ -93,7 +118,10 @@ function HomeHeader({ title }: HeaderProps) {
           </div>
         </h1>
       </div>
-      <div className={`${utility['__full_height']}`} ref={contentRef}></div>
+      <div
+        className={`${styles['header__bottom__spacer']}`}
+        ref={contentRef}
+      ></div>
     </>
   );
 }
