@@ -4,6 +4,7 @@ import { HomeSectionProps } from 'src/types/Home';
 import { ContactLink } from './ContactLink';
 import IonIcon from '@reacticons/ionicons';
 
+let linksArray = [];
 const email = {
   logo: 'mail-sharp' as const,
   url: 'mailto:michael@balson.email?subject=Hello Michael!',
@@ -20,15 +21,10 @@ const linkedin = {
   title: 'LinkedIn',
 };
 
-export const HomeContact = ({
-  contentColor,
-  contentBG,
-  textColor,
-  isSticky,
-}: HomeSectionProps) => {
+export const HomeContact = ({ textColor }: Partial<HomeSectionProps>) => {
   return (
     <>
-      <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>
+      <div className={`${styles['content__excerpt']} ${utility[textColor!]}`}>
         <div className={`${styles['contact__wrapper']}`}>
           <h2 className={`${styles['contact__title']}`}>Get in touch</h2>
           <ContactLink {...email} />
