@@ -29,7 +29,6 @@ export const HomeContact = ({ textColor }: Partial<HomeSectionProps>) => {
         <div className={`${styles['contact__wrapper']}`}>
           <h2 className={`${styles['contact__title']}`}>Get in touch</h2>
           <ContactLinks linksArray={linksArray} />
-          <ContactEmailForm />
         </div>
         {/* <div
           className={`${utility['__full_height']} ${utility[contentBG]}`}
