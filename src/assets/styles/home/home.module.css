@@ -98,10 +98,10 @@ body {
 .content__pin_word {
   background-color: var(--clr-dark);
   position: sticky;
-  top: calc(var(--fs-3x) - 6px);
+  top: calc(var(--fs-2x) - 6px);
   padding: 0 var(--fs-xs);
   margin: 0 calc(-1 * var(--fs-xs));
-
+  z-index: 2;
   text-shadow: var(--letterpressed);
 }
 
