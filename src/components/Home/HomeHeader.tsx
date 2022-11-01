@@ -7,6 +7,7 @@ type HeaderProps = { title: string };
 
 function HomeHeader({ title }: HeaderProps) {
   const { styles } = React.useContext(StylesContext);
+
   gsap.registerPlugin(ScrollTrigger);
 
   const contentRef = useRef<HTMLDivElement>(null);

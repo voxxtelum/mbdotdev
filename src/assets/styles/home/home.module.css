@@ -383,6 +383,11 @@ div.project__description {
   flex-direction: column;
   gap: var(--fs-sm);
 
+  & code {
+    font-family: var(--ff-mono);
+    font-size: 0.9em;
+  }
+
   & h4 {
     display: inline;
     font-family: var(--ff-mono);

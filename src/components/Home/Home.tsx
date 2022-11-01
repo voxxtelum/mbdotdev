@@ -8,9 +8,12 @@ import { HomeContact } from './Sections/HomeContact';
 import { HomeAbout } from './HomeAbout';
 
 function Home() {
+  const APP_TITLE = import.meta.env.MB_APP_TITLE;
+  console.log(APP_TITLE);
+
   return (
     <>
-      <HomeHeader title="Michael Balson"></HomeHeader>
+      <HomeHeader title={APP_TITLE}></HomeHeader>
       <HomeAbout></HomeAbout>
       <HomeContent
         textColor="light"

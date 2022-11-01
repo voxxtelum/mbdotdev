@@ -12,7 +12,7 @@ const Projects: Project[] = [
       <h4>STORES</h4> The criteria I used for picking stores was first - if it was a store that I enjoyed visiting and second - stores with a relatively limited number of locations, since many larger retail chains are ubiquitous in most or all regions of the country.\n
     </div>
     <div>
-      <h4>DATA</h4> All store data was gathered by myself and was either scraped directly from their websites using python's sracpy package or found on an open API endpoint. Data was organized and cleaned using a combination of custom python/javascript scripts and Google Sheets.
+      <h4>DATA</h4> All store data was gathered by myself and was either scraped directly from their websites using Python's <code>sracpy</code> package or found on an open API endpoint. Data was organized and cleaned using a combination of custom Python and JavaScript scripts and Google Sheets.
     </div>`,
     tags: [
       'Python',

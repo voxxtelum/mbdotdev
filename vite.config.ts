@@ -17,6 +17,8 @@ export default defineConfig({
       plugins: [postcssNesting],
     },
   },
+  envDir: './env',
+  envPrefix: 'MB_',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
