@@ -135,7 +135,7 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-xl);
   font-weight: var(--fw-700);
-  line-height: var(--fs-xl);
+  line-height: calc(1.2 * var(--fs-xl));
   text-transform: uppercase;
   overflow-wrap: normal;
 
@@ -295,6 +295,7 @@ h2.contact__title {
 }
 .project__card__wrapper {
   display: flex;
+  align-items: center;
   gap: var(--fs-base);
 
   @media (max-width: 1000px) {
@@ -323,7 +324,7 @@ h2.contact__title {
     background-color: var(--clr-dark);
     padding-inline: var(--fs-sm);
     padding-block: calc(0.5 * var(--fs-xs));
-    margin-inline: calc(-1 * var(--fs-sm));
+    /* margin-inline: calc(-1 * var(--fs-sm)); */
     /* margin-block-end: var(--fs-base); */
   }
 }
@@ -334,7 +335,7 @@ h2.contact__title {
   background-color: rgb(15 20 26 / 0.05);
   padding-inline: var(--fs-sm);
   padding-block: calc(0.5 * var(--fs-xs));
-  margin-inline: calc(-1 * var(--fs-sm));
+  /* margin-inline: calc(-1 * var(--fs-sm)); */
   margin-block-end: var(--fs-base);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 
@@ -366,18 +367,29 @@ h2.contact__title {
   }
 }
 
-p.project__description {
+div.project__description {
   margin-block-end: var(--fs-base);
   font-size: var(--fs-base);
   line-height: calc(1.4 * var(--fs-base));
   font-family: var(--ff-title);
   text-align: justify;
+  padding-inline: var(--fs-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--fs-sm);
+
+  & h4 {
+    display: inline;
+    font-family: var(--ff-mono);
+    text-decoration: underline;
+  }
 }
 
 .project__links {
   display: flex;
   flex-wrap: wrap;
   margin-inline-start: -6px;
+  padding-inline: var(--fs-sm);
 
   color: var(--clr-dark);
 }
@@ -393,15 +405,17 @@ p.project__description {
 
   & .project__link__logo {
     display: flex;
-    align-items: center;
     padding: 2px;
+    height: var(--fs-sm);
   }
 
   & .project__link {
     & a {
       color: inherit;
       font-size: var(--fs-sm);
+      line-height: calc(2 * var(--fs-sm));
       display: inline-flex;
+      padding: 0 0 2px 2px;
 
       text-decoration: underline;
 

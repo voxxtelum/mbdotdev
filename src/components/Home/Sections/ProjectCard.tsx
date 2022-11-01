@@ -4,12 +4,13 @@ import IonIcon from '@reacticons/ionicons';
 import Projects from '@data/Projects';
 
 export const ProjectCard = () => {
-  const { styles, utility } = React.useContext(StylesContext);
+  const { styles } = React.useContext(StylesContext);
 
   return (
     <>
       {Projects.map(
         ({ title, category, image, description, tags, links }, index) => {
+          const __description = { __html: description };
           return (
             <div
               key={`${index}-${title}`}
@@ -41,7 +42,10 @@ export const ProjectCard = () => {
                     ))}
                   </div>
                 </div>
-                <p className={styles['project__description']}>{description}</p>
+                <div
+                  dangerouslySetInnerHTML={__description}
+                  className={styles['project__description']}
+                ></div>
                 <div className={styles['project__links']}>
                   {links.map(({ logo, title: linkTitle, url }, linkIndex) => (
                     <div
