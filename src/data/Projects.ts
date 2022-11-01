@@ -41,7 +41,7 @@ const Projects: Project[] = [
   },
   {
     title: 'ColorGen',
-    category: 'React WebApp',
+    category: 'React App',
     image: '/images/projects/colorgen.png',
     description: `<div>
       <h4>WHAT</h4> ColorGen is a color shade generator that turns colors into configurable CSS custom parameters.

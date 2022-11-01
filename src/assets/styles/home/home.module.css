@@ -287,15 +287,20 @@ h2.contact__title {
 }
 
 .projects__wrapper {
-  margin-block: calc(2 * var(--fs-3x));
+  --projects-spacing: calc(1.5 * var(--fs-3x));
+
+  margin-block: var(--projects-spacing);
 
   text-transform: none;
   font-size: var(--fs-md);
   line-height: var(--fs-md);
+
+  & > div:not(:last-child) {
+    margin-block-end: var(--projects-spacing);
+  }
 }
 .project__card__wrapper {
   display: flex;
-  align-items: center;
   gap: var(--fs-base);
 
   @media (max-width: 1000px) {
