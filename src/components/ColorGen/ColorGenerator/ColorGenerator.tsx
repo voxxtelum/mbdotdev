@@ -53,7 +53,7 @@ const ColorGenerator = () => {
 
   const generateColorSchemeOutput = useCallback(
     (colorValues: FormValues[]): ColorScheme[] => {
-      let colorSchemeOutput: ColorScheme[] = [];
+      const colorSchemeOutput: ColorScheme[] = [];
       colorValues.forEach((row) => {
         if (!row.colorHex) {
           colorSchemeOutput.push({
@@ -63,7 +63,7 @@ const ColorGenerator = () => {
         }
 
         if (row.colorHex) {
-          let colorFormat = getFormat(row.colorHex.trim()) as Format;
+          const colorFormat = getFormat(row.colorHex.trim()) as Format;
 
           if (colorFormat !== 'hex') {
             colorSchemeOutput.push({
@@ -73,11 +73,11 @@ const ColorGenerator = () => {
           }
 
           if (colorFormat === 'hex') {
-            let value = row.colorHex.trim();
-            let name = row.colorName?.trim() || value;
-            let iterations = row.colorIterations || 5;
-            let strength = row.colorStrength || 0.05;
-            let lighten = row.colorLighten || false;
+            const value = row.colorHex.trim();
+            const name = row.colorName?.trim() || value;
+            const iterations = row.colorIterations || 5;
+            const strength = row.colorStrength || 0.05;
+            const lighten = row.colorLighten || false;
 
             colorSchemeOutput.push({
               colorScheme: `// ${name} - ${value.toUpperCase()} iterations:${iterations} strength:${strength} lighten:${lighten}`,
@@ -86,7 +86,7 @@ const ColorGenerator = () => {
 
             for (let i = 0; i < iterations; i++) {
               let colorBG: Colord;
-              let colorText: string = '';
+              let colorText = '';
 
               if (lighten === true) {
                 colorBG = colord(value).lighten(i * strength);
@@ -94,8 +94,8 @@ const ColorGenerator = () => {
                 colorBG = colord(value).darken(i * strength);
               }
 
-              let colorShade: string = colorBG.toHslString();
-              let colorString = `--${name}-${i + 1}: ${colorShade};`;
+              const colorShade: string = colorBG.toHslString();
+              const colorString = `--${name}-${i + 1}: ${colorShade};`;
 
               if (colorBG.isLight()) {
                 colorText = '#000000';
@@ -129,7 +129,7 @@ const ColorGenerator = () => {
     index: number,
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
-    let newFormValues = [...formValues];
+    const newFormValues = [...formValues];
 
     newFormValues[index][e.target.name] = e.target.value;
     setFormValues(newFormValues);
@@ -142,7 +142,7 @@ const ColorGenerator = () => {
     index: number,
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
-    let newFormValues = [...formValues];
+    const newFormValues = [...formValues];
 
     newFormValues[index][e.target.name] = e.target.checked;
     setFormValues(newFormValues);
@@ -152,8 +152,8 @@ const ColorGenerator = () => {
   };
 
   const addNewColor = () => {
-    let newColor = random().toHex();
-    let newFormValues = [
+    const newColor = random().toHex();
+    const newFormValues = [
       ...formValues,
       {
         colorHex: newColor,
@@ -170,7 +170,7 @@ const ColorGenerator = () => {
   };
 
   const removeColorRow = (index: number) => {
-    let newFormValues = [...formValues];
+    const newFormValues = [...formValues];
     newFormValues.splice(index, 1);
     setFormValues(newFormValues);
     const colorSchemeOutput = generateColorSchemeOutput(newFormValues);

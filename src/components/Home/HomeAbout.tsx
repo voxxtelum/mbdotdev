@@ -47,7 +47,7 @@ export const HomeAbout = () => {
             the web.
           </p>
           <p>
-            Now, I'm looking for the{' '}
+            Now, I&apos;m looking for the{' '}
             <span
               className={`${styles['about__emphasis']} ${utility['color__purple']}`}
             >

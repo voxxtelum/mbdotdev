@@ -1,13 +1,12 @@
 import { StylesContext } from '@context/Styles';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React from 'react';
-import { useRef, useLayoutEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 
 type HeaderProps = { title: string };
 
 function HomeHeader({ title }: HeaderProps) {
-  const { styles, utility } = React.useContext(StylesContext);
+  const { styles } = React.useContext(StylesContext);
   gsap.registerPlugin(ScrollTrigger);
 
   const contentRef = useRef<HTMLDivElement>(null);
@@ -16,16 +15,16 @@ function HomeHeader({ title }: HeaderProps) {
     const titleDiv = document.getElementById('title-1') as HTMLElement;
     const titleSpace = titleDiv?.offsetHeight || 100;
 
-    const varSpace = getComputedStyle(titleDiv).getPropertyValue('font-size');
+    // const varSpace = getComputedStyle(titleDiv).getPropertyValue('font-size');
 
-    const varSpaceAdj = Number(varSpace.slice(0, -2)) + 34;
+    // const varSpaceAdj = Number(varSpace.slice(0, -2)) + 34;
 
     const docStyle = getComputedStyle(document.documentElement);
     const fsSmall = docStyle.getPropertyValue('--fs-sm');
     const fslarge = docStyle.getPropertyValue('--fs-lg');
 
-    let ctx = gsap.context(() => {
-      let timeline = gsap.timeline({
+    const ctx = gsap.context(() => {
+      const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: contentRef.current,
           pin: true,

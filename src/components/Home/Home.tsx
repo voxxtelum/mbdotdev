@@ -1,3 +1,4 @@
+import React from 'react';
 import HomeHeader from './HomeHeader';
 import { HomeContent } from './HomeContent';
 import { HomeSkills } from './Sections/HomeSkills';

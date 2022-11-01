@@ -1,4 +1,5 @@
 import { FallbackProps } from 'react-error-boundary';
+import React from 'react';
 
 function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
   return (

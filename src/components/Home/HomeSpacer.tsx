@@ -1,7 +1,7 @@
 import { StylesContext } from '@context/Styles';
 import React from 'react';
 
-export const HomeSpacer = React.forwardRef<HTMLDivElement, any>((_, ref) => {
+const HomeSpacer = React.forwardRef<HTMLDivElement, any>((_, ref) => {
   const { styles, utility } = React.useContext(StylesContext);
   return (
     <>
@@ -12,3 +12,7 @@ export const HomeSpacer = React.forwardRef<HTMLDivElement, any>((_, ref) => {
     </>
   );
 });
+
+HomeSpacer.displayName = 'HomeSpacer';
+
+export default HomeSpacer;

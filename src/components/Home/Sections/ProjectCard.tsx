@@ -44,12 +44,12 @@ export const ProjectCard = () => {
                 <p className={styles['project__description']}>{description}</p>
                 <div className={styles['project__links']}>
                   {links.map(({ logo, title: linkTitle, url }, linkIndex) => (
-                    <div className={styles['project__link__wrapper']}>
+                    <div
+                      key={`${logo}-${linkIndex}`}
+                      className={styles['project__link__wrapper']}
+                    >
                       <div className={styles['project__link__logo']}>
-                        <IonIcon
-                          key={`${logo}-${linkIndex}`}
-                          name={logo}
-                        ></IonIcon>
+                        <IonIcon name={logo}></IonIcon>
                       </div>
                       <div className={`${styles['project__link']}`}>
                         <a href={url} target="_blank" rel="noopener noreferrer">

@@ -1,10 +1,10 @@
 import { HomeSectionProps, ContactLinkProps } from 'src/types/global';
 import { ContactLinks } from './ContactLinks';
-import { ContactEmailForm } from './ContactEmailForm';
+
 import React from 'react';
 import { StylesContext } from '@context/Styles';
 
-let linksArray = [] as ContactLinkProps[];
+const linksArray = [] as ContactLinkProps[];
 linksArray[0] = {
   logo: 'mail-sharp' as const,
   url: 'mailto:michael@balson.email?subject=Hello Michael!',

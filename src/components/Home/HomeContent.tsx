@@ -1,8 +1,5 @@
 import { StylesContext } from '@context/Styles';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React from 'react';
-import { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 import { HomeContentProps } from 'src/types/global';
 
@@ -17,12 +14,12 @@ export const HomeContent = ({
   // this is the element we'll be targeting!
   const skillsRef = useRef<HTMLDivElement>(null);
 
-  let backgroundColor = bgColor ? `bg__${bgColor}` : `bg__dark`;
+  const backgroundColor = bgColor ? `bg__${bgColor}` : `bg__dark`;
 
-  let contentColor = accentColor ? `color__${accentColor}` : `color__blue`;
-  let contentBG = accentColor ? `bg__${accentColor}` : `bg__blue`;
+  const contentColor = accentColor ? `color__${accentColor}` : `color__blue`;
+  const contentBG = accentColor ? `bg__${accentColor}` : `bg__blue`;
 
-  let color = textColor ? `color__${textColor}` : `color__light`;
+  const color = textColor ? `color__${textColor}` : `color__light`;
 
   useEffect(() => {
     const skillsBox = skillsRef?.current;
@@ -39,7 +36,7 @@ export const HomeContent = ({
 
     // clean up the observer
     return () => {
-      observer.unobserve(skillsBox!);
+      skillsBox ? observer.unobserve(skillsBox) : null;
     };
   }, [skillsRef]);
 
