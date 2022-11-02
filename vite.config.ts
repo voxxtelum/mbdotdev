@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import postcssNesting from 'postcss-nesting';
+import autoprefixer from 'autoprefixer';
 import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
@@ -14,7 +15,7 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [postcssNesting],
+      plugins: [postcssNesting, autoprefixer],
     },
   },
   envDir: './env',

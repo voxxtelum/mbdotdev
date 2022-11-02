@@ -3,5 +3,6 @@ module.exports = {
     'postcss-nesting': {
       /* plugin options */
     },
+    autoprefixer: {},
   },
 };
