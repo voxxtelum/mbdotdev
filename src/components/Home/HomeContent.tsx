@@ -11,7 +11,7 @@ export const HomeContent = ({
 }: HomeContentProps) => {
   const { styles, utility } = React.useContext(StylesContext);
   const [isSticky, setIsSticky] = useState<boolean>(false);
-  // this is the element we'll be targeting!
+
   const skillsRef = useRef<HTMLDivElement>(null);
 
   const backgroundColor = bgColor ? `bg__${bgColor}` : `bg__dark`;

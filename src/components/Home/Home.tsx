@@ -9,23 +9,22 @@ import { HomeAbout } from './HomeAbout';
 
 function Home() {
   const APP_TITLE = import.meta.env.MB_APP_TITLE;
-  console.log(APP_TITLE);
 
   return (
     <>
       <HomeHeader title={APP_TITLE}></HomeHeader>
       <HomeAbout></HomeAbout>
       <HomeContent
-        textColor="light"
-        bgColor="dark"
+        textColor="dark"
+        bgColor="blue"
         accentColor="blue"
-        Content={HomeSkills}
+        Content={HomeProjects}
       ></HomeContent>
       <HomeContent
         textColor="dark"
         bgColor="yellow"
         accentColor="yellow"
-        Content={HomeProjects}
+        Content={HomeSkills}
       ></HomeContent>
       <HomeContent
         textColor="light"

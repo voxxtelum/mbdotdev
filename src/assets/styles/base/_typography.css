@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@200;400;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@200;400;700;900&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap');
 
 :root {
   --ff-display: 'Monoton', monospace;
@@ -9,6 +9,7 @@
   --fw-200: 200;
   --fw-400: 400;
   --fw-700: 700;
+  --fw-900: 900;
 
   --fs-xs: clamp(0.64rem, 0.05vw + 0.63rem, 0.67rem);
   --fs-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
