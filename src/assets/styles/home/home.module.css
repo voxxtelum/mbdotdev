@@ -513,3 +513,28 @@ div.project__description {
     -2px 2px 0px 0px rgba(255, 203, 71, 1),
     -1px 1px 0px 0px rgba(255, 203, 71, 1);
 }
+
+.fixed__header_container {
+  position: fixed;
+  background-color: var(--clr-yellow);
+  top: 0;
+  width: 100%;
+  padding: var(--fs-sm);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 8px 2px;
+  z-index: 10;
+
+  & h1 {
+    color: var(--clr-dark);
+    font-family: var(--ff-body);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-700);
+    text-shadow: rgba(93, 214, 255, 0.75) -1px 1px 0px,
+      rgba(93, 214, 255, 0.75) -2px 2px 0px,
+      rgba(93, 214, 255, 0.75) -3px 3px 0px;
+  }
+}
+
+.fixed__header_spacer {
+  width: 100%;
+  height: calc(1.5 * var(--fs-3x));
+}
