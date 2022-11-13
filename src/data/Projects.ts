@@ -5,6 +5,9 @@ const Projects: Project[] = [
     title: 'Micro Center',
     category: 'Data Analysis',
     image: '/images/projects/proj_micro.webp',
+    internalLink: '/projects/microcenter/story',
+    internalLinkText: 'View Project Page',
+    internalLinkIcon: 'arrow-forward-circle-outline',
     description: `<div>
       Micro Center is an online and retail store chain that offers computer, electronic, networking, and communication devices. They differ from their competition in that they carry products that target a much wider audience, offering products and services tailored for beginners as well as more knowledgeable enthusiasts and experts.\n
       </div>
@@ -44,6 +47,9 @@ const Projects: Project[] = [
     title: 'Penitent Nomad',
     category: 'Data Analysis',
     image: '/images/projects/proj_nomad.webp',
+    internalLink: null,
+    internalLinkText: null,
+    internalLinkIcon: null,
     description: `<div>
       <h4>QUESTION</h4> I want to know how many areas in the United States are within so many miles of different stores. For example: Which areas in the United States are within 100 miles of an IKEA and 30 miles of a Micro Center? What if I wanted areas also within 50 miles of Store C and 20 miles of Store D? 
     </div>\n
@@ -82,6 +88,9 @@ const Projects: Project[] = [
     title: 'ColorGen',
     category: 'React App',
     image: '/images/projects/proj_colorgen.webp',
+    internalLink: null,
+    internalLinkText: null,
+    internalLinkIcon: null,
     description: `<div>
       <h4>WHAT</h4> ColorGen is a color shade generator that turns colors into configurable CSS custom parameters.
     </div>\n

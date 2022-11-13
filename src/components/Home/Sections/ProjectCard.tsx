@@ -2,6 +2,7 @@ import { StylesContext } from '@context/Styles';
 import React from 'react';
 import IonIcon from '@reacticons/ionicons';
 import Projects from '@data/Projects';
+import { Link } from 'react-router-dom';
 
 export const ProjectCard = () => {
   const { styles } = React.useContext(StylesContext);
@@ -9,7 +10,20 @@ export const ProjectCard = () => {
   return (
     <>
       {Projects.map(
-        ({ title, category, image, description, tags, links }, index) => {
+        (
+          {
+            title,
+            category,
+            image,
+            internalLink,
+            internalLinkText,
+            internalLinkIcon,
+            description,
+            tags,
+            links,
+          },
+          index
+        ) => {
           const __description = { __html: description };
           return (
             <div
@@ -42,6 +56,19 @@ export const ProjectCard = () => {
                     ))}
                   </div>
                 </div>
+                {internalLink && internalLinkText && internalLinkIcon ? (
+                  <Link
+                    className={styles['project__internal__link']}
+                    to={internalLink}
+                  >
+                    <>
+                      <div>{internalLinkText}</div>
+                      <IonIcon name={internalLinkIcon}></IonIcon>
+                    </>
+                  </Link>
+                ) : (
+                  ''
+                )}
                 <div
                   dangerouslySetInnerHTML={__description}
                   className={styles['project__description']}

@@ -28,6 +28,9 @@ export interface Project {
   title: string;
   category: string;
   image: string;
+  internalLink: string | null;
+  internalLinkText: string | null;
+  internalLinkIcon: React.ComponentProps<typeof IonIcon>['name'] | null;
   description: string;
   tags: string[];
   links: ContactLinkProps[];

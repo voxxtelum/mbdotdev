@@ -437,6 +437,29 @@ h2.contact__title {
   }
 }
 
+.project__internal__link {
+  margin-inline: var(--fs-sm);
+  margin-block-end: var(--fs-base);
+  padding: var(--fs-sm);
+  background-color: var(--clr-dark);
+  color: var(--clr-opal);
+  text-decoration: none;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-600);
+  display: flex;
+  gap: 4px;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: var(--clr-dark);
+    mix-blend-mode: hard-light;
+    box-shadow: -1px 1px 0px 0px rgba(255, 203, 71, 1),
+      -2px 2px 0px 0px rgba(255, 203, 71, 1),
+      -3px 2px 0px 0px rgba(255, 203, 71, 1),
+      -4px 3px 0px 0px rgba(255, 203, 71, 1);
+  }
+}
+
 div.project__description {
   margin-block-end: var(--fs-base);
   font-size: var(--fs-base);
@@ -531,6 +554,9 @@ div.project__description {
     text-shadow: rgba(93, 214, 255, 0.75) -1px 1px 0px,
       rgba(93, 214, 255, 0.75) -2px 2px 0px,
       rgba(93, 214, 255, 0.75) -3px 3px 0px;
+    & a {
+      text-decoration: none;
+    }
   }
 }
 
