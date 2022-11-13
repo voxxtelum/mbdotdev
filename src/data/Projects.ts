@@ -2,6 +2,44 @@ import { Project } from 'src/types/global';
 
 const Projects: Project[] = [
   {
+    title: 'Micro Center',
+    category: 'Data Analysis',
+    image: '/images/projects/proj_micro.webp',
+    description: `<div>
+      Micro Center is an online and retail store chain that offers computer, electronic, networking, and communication devices. They differ from their competition in that they carry products that target a much wider audience, offering products and services tailored for beginners as well as more knowledgeable enthusiasts and experts.\n
+      </div>
+      <div>
+      Anecdotally, Micro Center is famous for having very competitive prices, with the caveat being most of these deals are only found in their brick-and-mortar locations. Additionally, they are infamous for their few number of stores.\n
+    </div>
+    <div>
+      Recently, I have been thinking a lot about moving to a new area and considering aspects of places I've lived previously that I missed. One of those was being close to a Micro Center, which led me to ask, which locations would be most suitable for a possible new expansion of Micro Center?
+    </div>`,
+    tags: [
+      'Python',
+      'Jupyter Notebook',
+      'Javascript',
+      'Tableau',
+      'Google Sheets',
+    ],
+    links: [
+      {
+        logo: 'logo-github',
+        url: 'https://github.com/voxxtelum/microcenter-study',
+        title: 'View Code on GitHub',
+      },
+      {
+        logo: 'server-outline',
+        url: 'https://tinyurl.com/microcenter-study',
+        title: 'View Data',
+      },
+      {
+        logo: 'earth-outline',
+        url: 'https://public.tableau.com/views/MicroCenter/PredictionsbyCurrentandMajorInterstates?:language=en-US&:display_count=n&:origin=viz_share_link',
+        title: 'View on Tableau',
+      },
+    ],
+  },
+  {
     title: 'Penitent Nomad',
     category: 'Data Analysis',
     image: '/images/projects/proj_nomad.webp',
