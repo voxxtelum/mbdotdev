@@ -12,7 +12,7 @@ export const HomeSkills = ({
   return (
     <>
       <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>
-        This is where all of my{' '}
+        Here are some of the{' '}
         <span
           className={`${isSticky ? '' : styles['pin__active']} ${
             styles['content__pin_word']
@@ -20,7 +20,7 @@ export const HomeSkills = ({
         >
           skills
         </span>{' '}
-        would go. Look what else I can dommmmmmmm.
+        I&apos;ve picked up along my path.
         <div
           className={`${utility['__full_height']} ${utility[contentBG]}`}
         ></div>

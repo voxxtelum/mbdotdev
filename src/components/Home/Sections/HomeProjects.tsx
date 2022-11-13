@@ -13,7 +13,7 @@ export const HomeProjects = ({
   return (
     <>
       <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>
-        I can put some{' '}
+        I&apos;m always excited about finding new{' '}
         <span
           className={`${isSticky ? '' : styles['pin__active']} ${
             styles['content__pin_word']
@@ -21,7 +21,7 @@ export const HomeProjects = ({
         >
           projects
         </span>{' '}
-        here. Look at how many there are.
+        and here are a few you can look at now.
         <div
           className={`${styles['projects__wrapper']} ${utility['__full_height']} ${utility[contentBG]}`}
         >

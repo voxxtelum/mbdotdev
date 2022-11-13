@@ -12,15 +12,15 @@ export const HomeSectionExample = ({
   return (
     <>
       <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>
-        Here is an{' '}
+        Here is more{' '}
         <span
           className={`${isSticky ? '' : styles['pin__active']} ${
             styles['content__pin_word']
           } ${utility[contentColor]}`}
         >
-          example
+          open
         </span>{' '}
-        of more stuff I could add. What else can go here?
+        space. I could add anything here.
         <div
           className={`${utility['__full_height']} ${utility[contentBG]}`}
         ></div>

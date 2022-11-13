@@ -16,6 +16,7 @@ const Projects: Project[] = [
     </div>`,
     tags: [
       'Python',
+      'SQL',
       'Jupyter Notebook',
       'Javascript',
       'Tableau',
