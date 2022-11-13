@@ -46,7 +46,7 @@ function HomeHeader({ title }: HeaderProps) {
         id="header_container"
         className={styles['header-container']}
       >
-        <img alt="background" src="/public/images/MichaelBalson.webp"></img>
+        <img alt="background" src="/public/images/michaelbalson.webp"></img>
         <div className={styles['title__bars__grid']}>
           <div>
             <div
