@@ -21,7 +21,7 @@ export const Code = () => {
   const custStyle = {
     borderRadius: '2px',
     fontSize: '12px',
-
+    margin: 'calc(0.75 * var(--fs-base)) 0 0 0',
     fontFamily: 'Fira Code, monospace',
     fontWeight: '400',
   };

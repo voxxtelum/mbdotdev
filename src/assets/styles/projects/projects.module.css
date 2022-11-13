@@ -91,7 +91,7 @@
     -1px 1px 0px 0px rgba(255, 203, 71, 1);
 
   & > * {
-    margin-block-end: var(--fs-base);
+    margin-block: calc(0.75 * var(--fs-base));
   }
 
   & h3 {
@@ -170,7 +170,8 @@
   }
 
   & .project__code_output {
-    background-color: hsl(166, 28%, 83%);
+    margin-block-start: 0;
+    background-color: hsl(166, 28%, 78%);
     font-family: var(--ff-mono);
     font-size: var(--fs-sm);
     padding-inline: var(--fs-sm);

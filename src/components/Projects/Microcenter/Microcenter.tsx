@@ -11,7 +11,7 @@ export const Microcenter = () => {
       <div className={pro['project__wrapper']}>
         <div></div>
         <div>
-          <h2>Case Study: A Potentional Micro Center Expansion Location</h2>
+          <h2>Case Study: A Potential Micro Center Expansion Location</h2>
           <nav className={pro['project__nav']}>
             <NavLink
               to="story"
