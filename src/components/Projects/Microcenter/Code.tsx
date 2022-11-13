@@ -15,9 +15,15 @@ export const Code = () => {
   const codeProps = {
     style: {
       fontFamily: 'Fira Code, monospace',
-      fontSize: 'var(--fs-xs)',
-      borderRadius: '2px',
     },
+  };
+
+  const custStyle = {
+    borderRadius: '2px',
+    fontSize: '12px',
+
+    fontFamily: 'Fira Code, monospace',
+    fontWeight: '400',
   };
 
   const code1 = `import pandas as pd
@@ -163,7 +169,10 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -173,13 +182,16 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
           {code2}
         </SyntaxHighlighter>
-        <h4>Preaparing Dataframes</h4>
+        <h4>Preparing Dataframes</h4>
         <p>
           First I want to create arrays with the metro names and the targets
           (whether or not the metro has a location already)
@@ -187,7 +199,10 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -200,7 +215,10 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -217,7 +235,10 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -232,7 +253,10 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -250,13 +274,16 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
           {code7}
         </SyntaxHighlighter>
-        <h3>Dimension Reduction using Principal Component Analysis</h3>
+        <h4>Dimension Reduction using Principal Component Analysis</h4>
         <p>
           First I perform the PCA with the maximum number of Principal
           Components to view the total and cumulative variance of each one.
@@ -264,7 +291,10 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -273,7 +303,10 @@ number_locations = find_nearby_locations(zip_codes, 25)`;
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -290,7 +323,10 @@ Total explained variation: 100.0%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -311,7 +347,10 @@ Total explained variation: 100.0%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -338,7 +377,10 @@ Total explained variation: 100.0%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -347,7 +389,10 @@ Total explained variation: 100.0%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -364,7 +409,10 @@ Total explained variation: 58.48%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -373,7 +421,10 @@ Total explained variation: 58.48%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -395,7 +446,10 @@ Total explained variation: 58.48%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -405,7 +459,10 @@ Total explained variation: 58.48%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           codeTagProps={codeProps}
         >
@@ -415,7 +472,10 @@ Total explained variation: 58.48%`}
         <SyntaxHighlighter
           language="python"
           style={theme}
-          showLineNumbers={true}
+          customStyle={custStyle}
+          lineProps={{
+            style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+          }}
           wrapLines={true}
           wrapLongLines={true}
           codeTagProps={codeProps}

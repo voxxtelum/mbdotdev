@@ -158,9 +158,21 @@
       font-style: italic;
     }
   }
+}
 
-  & code#project__code {
+.project__page_wrapper_code {
+  font-family: var(--ff-body);
+
+  & h4 {
+    margin-block: var(--fs-md) var(--fs-sm);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-600);
+  }
+
+  & .project__code_output {
+    background-color: hsl(166, 28%, 83%);
     font-family: var(--ff-mono);
-    font-size: calc(0.9 * var(--fs-base));
+    font-size: var(--fs-sm);
+    padding-inline: var(--fs-sm);
   }
 }
