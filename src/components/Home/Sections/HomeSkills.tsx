@@ -11,16 +11,23 @@ export const HomeSkills = ({
   const { styles, utility } = React.useContext(StylesContext);
   return (
     <>
-      <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>
-        Here are some of the{' '}
+      <div
+        id="skills"
+        className={`${styles['content__excerpt']} ${utility[textColor]}`}
+      >
+        <div
+          className={`${styles['content__title__space_a']} ${utility['bg__orange']}`}
+        ></div>
         <span
           className={`${isSticky ? '' : styles['pin__active']} ${
             styles['content__pin_word']
           } ${utility[contentColor]}`}
         >
-          skills
-        </span>{' '}
-        I&apos;ve picked up along my path.
+          Skills
+        </span>
+        <div
+          className={`${styles['content__title__space_b']} ${utility['bg__orange']}`}
+        ></div>
         <div
           className={`${utility['__full_height']} ${utility[contentBG]}`}
         ></div>

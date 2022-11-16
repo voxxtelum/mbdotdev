@@ -11,16 +11,17 @@ export const HomeSectionExample = ({
   const { styles, utility } = React.useContext(StylesContext);
   return (
     <>
-      <div className={`${styles['content__excerpt']} ${utility[textColor]}`}>
-        Here is more{' '}
+      <div
+        id="open"
+        className={`${styles['content__excerpt']} ${utility[textColor]}`}
+      >
         <span
           className={`${isSticky ? '' : styles['pin__active']} ${
             styles['content__pin_word']
           } ${utility[contentColor]}`}
         >
-          open
-        </span>{' '}
-        space. I could add anything here.
+          Open
+        </span>
         <div
           className={`${utility['__full_height']} ${utility[contentBG]}`}
         ></div>

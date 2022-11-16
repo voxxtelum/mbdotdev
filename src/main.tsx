@@ -17,6 +17,8 @@ import { Projects } from '@components/Projects/Projects';
 import { Microcenter } from '@components/Projects/Microcenter/Microcenter';
 import { Story } from '@components/Projects/Microcenter/Story';
 import { Code } from '@components/Projects/Microcenter/Code';
+import { App } from '@components/App/App';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 interface ScrollTopProps {
   children: React.ReactNode;
@@ -36,8 +38,12 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <ScrollTopWrapper>
+            <ParallaxProvider>
+              <Routes>
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </ParallaxProvider>
             <Routes>
-              <Route path="/" element={<Home />} />
               <Route path="/colorgen" element={<ColorGenerator />} />
               <Route path="/projects" element={<Projects />}>
                 <Route path="microcenter" element={<Microcenter />}>

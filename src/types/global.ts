@@ -7,11 +7,17 @@ export interface HomeSectionProps {
   isSticky: boolean;
 }
 
+export interface ITitle {
+  title: string;
+}
+
 export interface HomeContentProps {
   bgColor?: string;
   accentColor?: string;
   textColor?: string;
   Content: React.ComponentType<HomeSectionProps>;
+  title: string;
+  setTitle: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface ContactLinkProps {

@@ -1,5 +1,6 @@
 import { StylesContext } from '@context/Styles';
 import React, { useRef, useState, useEffect } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 type HeaderProps = {
   title: string;
 };
@@ -46,7 +47,10 @@ function HomeHeader({ title }: HeaderProps) {
         id="header_container"
         className={styles['header-container']}
       >
-        <img alt="background" src="/images/michaelbalson.webp"></img>
+        {/* <div className={styles['header__background']}></div> */}
+        <Parallax speed={-50}>
+          <img alt="background" src="/images/home/michaelbalson.webp" />
+        </Parallax>
         <div className={styles['title__bars__grid']}>
           <div>
             <div
@@ -90,9 +94,23 @@ function HomeHeader({ title }: HeaderProps) {
               className={`${styles['title__bar']} ${utility['bg__blue']} ${styles['bar__200']}`}
             ></div>
           </div>
+          <div>
+            <div
+              className={`${styles['title__bar']} ${utility['bg__yellow']} ${styles['bar__500']}`}
+            ></div>
+            <div
+              className={`${styles['title__bar']} ${utility['bg__opal']} ${styles['bar__200']}`}
+            ></div>
+            <div
+              className={`${styles['title__bar']} ${utility['bg__blue']} ${styles['bar__400']}`}
+            ></div>
+            <div
+              className={`${styles['title__bar']} ${utility['bg__orange']} ${styles['bar__400']}`}
+            ></div>
+          </div>
         </div>
       </div>
-      <div className={`${styles['header__bottom__spacer']}`}></div>
+      {/* <div className={`${styles['header__bottom__spacer']}`}></div> */}
     </>
   );
 }

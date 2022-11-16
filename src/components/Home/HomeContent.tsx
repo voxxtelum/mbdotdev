@@ -8,6 +8,8 @@ export const HomeContent = ({
   accentColor,
   textColor,
   Content,
+  setTitle,
+  title,
 }: HomeContentProps) => {
   const { styles, utility } = React.useContext(StylesContext);
   const [isSticky, setIsSticky] = useState<boolean>(false);
@@ -27,7 +29,9 @@ export const HomeContent = ({
       ([e]) => {
         setIsSticky(e.isIntersecting);
       },
-      { threshold: [0.1, 1], rootMargin: '0px 0px 0px 0px' }
+      {
+        threshold: 1,
+      }
     );
 
     if (skillsBox) {

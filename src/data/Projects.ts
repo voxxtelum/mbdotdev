@@ -8,12 +8,7 @@ const Projects: Project[] = [
     internalLink: '/projects/microcenter/story',
     internalLinkText: 'View Project Page',
     internalLinkIcon: 'arrow-forward-circle-outline',
-    description: `<div>
-      Micro Center is an online and retail store chain that offers computer, electronic, networking, and communication devices. They differ from their competition in that they carry products that target a much wider audience, offering products and services tailored for beginners as well as more knowledgeable enthusiasts and experts.\n
-      </div>
-      <div>
-      Anecdotally, Micro Center is famous for having very competitive prices, with the caveat being most of these deals are only found in their brick-and-mortar locations. Additionally, they are infamous for their few number of stores.\n
-    </div>
+    description: `
     <div>
       Recently, I have been thinking a lot about moving to a new area and considering aspects of places I've lived previously that I missed. One of those was being close to a Micro Center, which led me to ask, which locations would be most suitable for a possible new expansion of Micro Center?
     </div>`,
