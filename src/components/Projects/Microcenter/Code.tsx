@@ -1,12 +1,12 @@
 import { StylesContext } from '@context/Styles';
 import React, { useContext } from 'react';
 import Zoom from 'react-medium-image-zoom';
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import python from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+//import python from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
 import '@assets/styles/projects/react-image-zoom.css';
 
-SyntaxHighlighter.registerLanguage('python', python);
+//SyntaxHighlighter.registerLanguage('python', python);
 
 export const Code = () => {
   const { projects: pro } = useContext(StylesContext);

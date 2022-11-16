@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   max-width: 100%;
+  font-size: calc(0.9 * var(--fs-base));
   @media (max-width: 1000px) {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -102,8 +103,6 @@
     border-bottom: 2px solid var(--clr-dark);
   }
   & p {
-    font-size: calc(0.9 * var(--fs-base));
-
     & em {
       background-color: var(--clr-dark);
       color: var(--clr-blue);
