@@ -79,23 +79,25 @@ export const Sources = () => {
             Sketch
           </a>
         </p>
-        All maps were styled using{' '}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.mapbox.com/"
-        >
-          Mapbox
-        </a>{' '}
-        and shapefiles were edited with{' '}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.qgis.org/en/site/"
-        >
-          QGIS
-        </a>
-        .
+        <p>
+          All maps were styled using{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.mapbox.com/"
+          >
+            Mapbox
+          </a>{' '}
+          and shapefiles were edited with{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.qgis.org/en/site/"
+          >
+            QGIS
+          </a>
+          .
+        </p>
       </div>
     </>
   );
