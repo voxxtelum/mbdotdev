@@ -21,6 +21,13 @@
       -1px 1px 0px 0px rgba(255, 203, 71, 1);
   }
 }
+
+.inline__code {
+  font-family: var(--ff-mono);
+  font-size: 0.9em;
+  background-color: var(--clr-light);
+  padding-inline: 0.25em;
+}
 .project__nav {
   display: flex;
   gap: var(--fs-sm);
@@ -100,6 +107,10 @@
     margin-block: var(--fs-sm);
     line-height: var(--fs-lg);
     border-bottom: 2px solid var(--clr-dark);
+  }
+  & h4 {
+    font-size: var(--fs-md);
+    line-height: var(--fs-lg);
   }
   & p {
     font-size: calc(0.8 * var(--fs-base));

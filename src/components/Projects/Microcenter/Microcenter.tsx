@@ -29,6 +29,14 @@ export const Microcenter = () => {
             >
               Code
             </NavLink>
+            <NavLink
+              to="sources"
+              className={({ isActive }) =>
+                isActive ? activeClassName : undefined
+              }
+            >
+              Sources & Tools
+            </NavLink>
           </nav>
           <Outlet />
         </div>

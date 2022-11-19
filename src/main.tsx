@@ -19,6 +19,7 @@ import { Story } from '@components/Projects/Microcenter/Story';
 import { Code } from '@components/Projects/Microcenter/Code';
 import { App } from '@components/App/App';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { Sources } from '@components/Projects/Microcenter/Sources';
 
 interface ScrollTopProps {
   children: React.ReactNode;
@@ -49,6 +50,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                 <Route path="microcenter" element={<Microcenter />}>
                   <Route path="*" element={<Story />} />
                   <Route path="code" element={<Code />} />
+                  <Route path="sources" element={<Sources />} />
                 </Route>
               </Route>
             </Routes>
